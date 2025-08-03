@@ -1,19 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".section");
+// If needed, add interactivity here.
+// Example: Smooth scroll to About Us section
 
-  const options = {
-    threshold: 0.2
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      }
+document.querySelectorAll('a[href^="#about-us"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
-  }, options);
-
-  sections.forEach(section => {
-    observer.observe(section);
   });
 });
+
