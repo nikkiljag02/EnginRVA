@@ -1,4 +1,4 @@
-// Smooth scroll behavior for all nav links
+// Enable smooth scroll for all anchor links in the nav bar
 document.querySelectorAll("nav a[href^='#']").forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -11,4 +11,3 @@ document.querySelectorAll("nav a[href^='#']").forEach(anchor => {
     }
   });
 });
-
