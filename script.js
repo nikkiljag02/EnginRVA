@@ -1,12 +1,14 @@
-// If needed, add interactivity here.
-// Example: Smooth scroll to About Us section
-
-document.querySelectorAll('a[href^="#about-us"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+// Smooth scroll behavior for all nav links
+document.querySelectorAll("nav a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 });
 
