@@ -130,27 +130,38 @@ h2 {
 /* TEAM SECTION */
 .team-card {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
 }
 
 .team-card img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
+  object-position: top center;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .team-card h3 {
   margin: 0;
-  color: #1e90ff;
+  color: #d6006d;
 }
 
 .team-card h4 {
   margin: 0.3rem 0;
   font-weight: 600;
-  color: #333;
+  color: #0077cc;
 }
 
 /* CONTACT */
